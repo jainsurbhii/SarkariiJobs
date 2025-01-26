@@ -1,0 +1,17 @@
+.navbar{
+    background-color: pink;
+}
+.navbar .navbar-nav .nav-link{
+    color: #000000;
+    font-size: 0 2rem;
+}
+@media screen and (min-width:768px) {
+    .navbar-brand{
+        margin-right:0;
+        padding:0 2rem;
+    }
+    .navbar .navbar-nav .nav-link{
+        font-size: 0.5rem 2rem;
+    }
+    
+}
