@@ -1,66 +1,67 @@
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #007bff;
   color: white;
-  padding: 10px 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-.logo span {
-  color: #28a745;
-  margin-left: 5px;
-}
-
-nav {
+nav ul {
+  list-style: none;
   display: flex;
-  align-items: center;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
 }
 
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
   color: white;
+  text-decoration: none;
   font-size: 1rem;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
-.notification {
+.search-btn {
+  background-color: white;
+  color: #007bff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 1.2rem;
-  margin-left: 15px;
 }
+
+.notification-icon {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+body {
+  padding-top: 60px; /* Prevents content from being hidden behind the fixed header */
+}
+
+/* Responsive styles */
 @media (max-width: 768px) {
-  header {
+  .header {
       flex-direction: column;
-      align-items: flex-start;
-      padding: 10px;
+      text-align: center;
   }
 
-  .logo {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-  }
-
-  nav {
+  nav ul {
       flex-direction: column;
-      align-items: flex-start;
       gap: 10px;
-  }
-
-  nav a {
-      margin-left: 0;
-      font-size: 0.9rem;
   }
 }

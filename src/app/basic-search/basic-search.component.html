@@ -1,0 +1,28 @@
+<div class="search-container">
+    <select [(ngModel)]="selectedState">
+      <option value="">Select State</option>
+      <option *ngFor="let state of states" [value]="state">{{ state }}</option>
+    </select>
+  
+    <select [(ngModel)]="selectedCategory">
+      <option value="">Select Category</option>
+      <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+    </select>
+    <select [(ngModel)]="selectedTitle">
+        <option value="">Select Title</option>
+        <option *ngFor="let title of title" [value]="title">{{ title }}</option>
+      </select>
+
+  
+    <button (click)="searchJobs()">Search</button>
+  </div>
+  
+  <div class="job-results">
+    <h3>Job Results</h3>
+    <ul>
+      <li *ngFor="let job of jobs">
+        {{ job.title }} ({{ job.state }} - {{ job.category }})
+      </li>
+    </ul>
+  </div>
+  

@@ -1,0 +1,43 @@
+.search-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+  }
+  
+  .search-container select, .search-container button {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .search-container button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .search-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .job-results {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .job-results ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .job-results li {
+    background: #f8f9fa;
+    padding: 10px;
+    margin: 5px auto;
+    border: 1px solid #ddd;
+    max-width: 400px;
+    border-radius: 5px;
+  }
+  

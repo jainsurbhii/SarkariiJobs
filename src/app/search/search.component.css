@@ -1,10 +1,10 @@
 .search-container {
     display: flex;
     align-items: center;
-    margin: 40px auto;
+    margin: 100px auto 40px; /* Increased top margin to push it below header */
     max-width: 600px;
+    padding: 10px;
 }
-
 .search-container input {
     flex: 1;
     padding: 10px;

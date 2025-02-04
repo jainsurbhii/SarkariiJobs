@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TrendingJobsComponent } from './trending-jobs/trending-jobs.component';
 import { SearchComponent } from './search/search.component';
+import { BasicSearchComponent } from './basic-search/basic-search.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +16,14 @@ import { SearchComponent } from './search/search.component';
     HeaderComponent,
     FooterComponent,
     TrendingJobsComponent,
-    SearchComponent
+    SearchComponent,
+    BasicSearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
