@@ -7,13 +7,15 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TrendingJobsComponent } from './trending-jobs/trending-jobs.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    TrendingJobsComponent
+    TrendingJobsComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
