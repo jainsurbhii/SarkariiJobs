@@ -1,3 +1,74 @@
-.footer{
-    color: deepskyblue;
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #ddd;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.left-column, .right-column {
+    flex: 2;
+    padding: 10px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.subscribe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.subscribe-container input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.subscribe-container button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.subscribe-container button:hover {
+    background-color: #0056b3;
+}
+
+.contact-info, .help-section {
+    margin: 20px 0;
+}
+
+.contact-info p, .help-section p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.alert {
+    margin-top: 20px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.card-footer {
+    background-color: #e9ecef;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
 }

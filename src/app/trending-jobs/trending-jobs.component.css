@@ -1,69 +1,26 @@
-.job-list {
-    margin: 20px auto;
-    max-width: 600px;
+.latest-jobs-container {
+    overflow-x: auto;
+    white-space: nowrap;
     padding: 10px;
-    background-color: white;
-    border: 1px solid #ddd;
+}
+
+.latest-jobs {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 15px;
+}
+
+.latest-job-item {
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.job-list h2 {
-    margin: 0 0 10px;
-    font-size: 1.5rem;
-    color: #007bff;
-}
-
-.job {
-    margin-bottom: 10px;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-.job:last-child {
-    border-bottom: none;
-}
-@media (max-width: 768px) {
-    .job-list {
-        max-width: 90%;
-        padding: 15px;
-    }
-
-    .job-list h2 {
-        font-size: 1.3rem;
-    }
-
-    .job h3 {
-        font-size: 1.1rem;
-    }
-
-    .job p {
-        font-size: 0.9rem;
-    }
-
-    .job small {
-        font-size: 0.8rem;
-    }
-}
-@media (max-width: 480px) {
-    .job-list {
-        max-width: 95%;
-        padding: 10px;
-    }
-
-    .job-list h2 {
-        font-size: 1.2rem;
-    }
-
-    .job h3 {
-        font-size: 1rem;
-    }
-
-    .job p {
-        font-size: 0.85rem;
-    }
-
-    .job small {
-        font-size: 0.75rem;
-    }
+    background-color: #f8f9fa;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    min-width: 250px; 
+    padding: 15px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    text-align: center; 
 }
