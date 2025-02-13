@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {APIService} from 'src/app/api.service'
 
 @Component({
   selector: 'app-trending-jobs',
@@ -6,11 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./trending-jobs.component.css']
 })
 export class TrendingJobsComponent implements OnInit {
+  data: any;
 
-  constructor() { }
+  constructor(private apiService: APIService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+   
   }
+
   jobs = [
     { title: 'Junior Engineer', description: 'Apply for Junior Engineer position in the Railways.', postedDate: '2025-01-25' },
     { title: 'Bank Clerk', description: 'Openings in nationalized banks for Clerk posts.', postedDate: '2025-01-26' },

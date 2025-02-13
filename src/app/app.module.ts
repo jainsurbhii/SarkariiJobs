@@ -9,6 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TrendingJobsComponent } from './trending-jobs/trending-jobs.component';
 import { SearchComponent } from './search/search.component';
 import { BasicSearchComponent } from './basic-search/basic-search.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { BasicSearchComponent } from './basic-search/basic-search.component';
     BasicSearchComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     NgbModule,
