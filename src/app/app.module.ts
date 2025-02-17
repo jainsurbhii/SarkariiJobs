@@ -8,8 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TrendingJobsComponent } from './trending-jobs/trending-jobs.component';
 import { SearchComponent } from './search/search.component';
-import { BasicSearchComponent } from './basic-search/basic-search.component';
 import { HttpClientModule } from '@angular/common/http';
+import { JobSearchComponent } from './job-search/job-search.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     TrendingJobsComponent,
     SearchComponent,
-    BasicSearchComponent
+    JobSearchComponent
   ],
   imports: [
     HttpClientModule,

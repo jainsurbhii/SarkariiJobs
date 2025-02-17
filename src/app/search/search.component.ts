@@ -1,21 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import {APIService} from 'src/app/api.service'
+import { Component } from '@angular/core';
+import { JobSearchService } from '../job-search.service';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
-export class SearchComponent implements OnInit {
-  data: any;
-jobs: any;
+export class SearchComponent {
+  searchTerm: string = '';
 
-  constructor(private apiService: APIService) { }
+  constructor(private jobSearchService: JobSearchService) {}
 
-  ngOnInit(): void {
-    this.apiService.getData().subscribe((response: any) => {
-      this.data = response;
-    });
+  onSearch(): void {
+    console.log("Search Term:", this.searchTerm); // Debugging
+    this.jobSearchService.updateSearchQuery(this.searchTerm); // Send search term
   }
-
 }

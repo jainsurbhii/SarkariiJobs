@@ -1,0 +1,22 @@
+<p *ngIf="searchTerm && filteredJobs.length === 0" class="no-jobs">No jobs available.</p>
+
+<table *ngIf="filteredJobs.length > 0" class="table table-striped">
+  <thead>
+    <tr>
+      <th>Job ID</th>
+      <th>Title</th>
+      <th>State</th>
+      <th>Category</th>
+      <th>Apply</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let job of filteredJobs">
+      <td>{{ job.jobId }}</td>
+      <td>{{ job.title }}</td>
+      <td>{{ job.state }}</td>
+      <td>{{ job.category }}</td>
+      <td><a [href]="job.link" target="_blank">Apply</a></td>
+    </tr>
+  </tbody>
+</table>
