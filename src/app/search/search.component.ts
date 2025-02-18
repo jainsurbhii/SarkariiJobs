@@ -12,7 +12,10 @@ export class SearchComponent {
   constructor(private jobSearchService: JobSearchService) {}
 
   onSearch(): void {
-    console.log("Search Term:", this.searchTerm); // Debugging
-    this.jobSearchService.updateSearchQuery(this.searchTerm); // Send search term
+    this.jobSearchService.updateSearchQuery({
+      searchTerm: this.searchTerm,
+      category: '',
+      state: ''
+    });
   }
 }

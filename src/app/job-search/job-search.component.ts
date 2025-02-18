@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { APIService } from '../api.service';
 import { JobSearchService } from '../job-search.service';
 
 @Component({
@@ -8,41 +7,33 @@ import { JobSearchService } from '../job-search.service';
   styleUrls: ['./job-search.component.css']
 })
 export class JobSearchComponent implements OnInit {
-  jobs: any[] = [];  
+  jobs: any[] = [];
   filteredJobs: any[] = [];
-  searchTerm: string = '';  
+  searchTerm: string = '';
+  selectedCategory: string = '';
+  selectedState: string = '';
 
-  constructor(private apiService: APIService, private jobSearchService: JobSearchService) {}
+  constructor(private jobSearchService: JobSearchService) {}
 
   ngOnInit(): void {
-    this.apiService.getData().subscribe(
-      (response: any) => {
-        this.jobs = response;
-        this.filteredJobs = response;
-      },
-      (error) => {
-        console.error("Error fetching data:", error);
-      }
-    );
+    this.jobSearchService.getJobs().subscribe((data: any[]) => {
+      this.jobs = data;
+      this.filteredJobs = data;
+    });
 
-    // Subscribe to search term updates
     this.jobSearchService.searchQuery$.subscribe(query => {
-      console.log("Received Search Query:", query); // Debugging
-      this.searchTerm = query;
+      this.searchTerm = query.searchTerm;
+      this.selectedCategory = query.category;
+      this.selectedState = query.state;
       this.filterJobs();
     });
   }
 
   filterJobs(): void {
-    if (!this.searchTerm.trim()) {
-      this.filteredJobs = this.jobs; // Reset when search is empty
-      return;
-    }
-
     this.filteredJobs = this.jobs.filter(job =>
-      job?.title?.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
-      job?.state?.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
-      job?.category?.toLowerCase().includes(this.searchTerm.toLowerCase())
+      (this.searchTerm ? job.title.toLowerCase().includes(this.searchTerm.toLowerCase()) : true) &&
+      (this.selectedCategory ? job.category === this.selectedCategory : true) &&
+      (this.selectedState ? job.state === this.selectedState : true)
     );
   }
 }

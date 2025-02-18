@@ -10,6 +10,7 @@ import { TrendingJobsComponent } from './trending-jobs/trending-jobs.component';
 import { SearchComponent } from './search/search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { JobSearchComponent } from './job-search/job-search.component';
+import { BasicSearchComponent } from './basic-search/basic-search.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { JobSearchComponent } from './job-search/job-search.component';
     FooterComponent,
     TrendingJobsComponent,
     SearchComponent,
-    JobSearchComponent
+    JobSearchComponent,
+    BasicSearchComponent
   ],
   imports: [
     HttpClientModule,
