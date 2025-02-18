@@ -20,10 +20,10 @@ export class JobSearchService {
   }
 
   getJobs(): Observable<any> {
-    return this.apiService.getData(); // ✅ Fetch jobs from API
+    return this.apiService.getData(); 
   }
 
-  // ✅ Add methods to fetch categories and states
+ 
   getCategories(): Observable<string[]> {
     return new Observable(observer => {
       observer.next(["Engineering", "Medical", "Teaching", "Defence"]);
@@ -34,6 +34,12 @@ export class JobSearchService {
   getStates(): Observable<string[]> {
     return new Observable(observer => {
       observer.next(["Delhi", "Maharashtra", "Tamil Nadu", "Karnataka"]);
+      observer.complete();
+    });
+  }
+  getTitle(): Observable<string[]> {
+    return new Observable(observer => {
+      observer.next(["Junior Engineer", "Surgeon", "Professor"]);
       observer.complete();
     });
   }

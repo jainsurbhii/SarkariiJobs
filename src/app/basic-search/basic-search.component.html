@@ -1,3 +1,4 @@
+
 <div class="filter-container">
     <select [(ngModel)]="selectedCategory" (change)="onFilterChange()">
       <option value="">All Categories</option>
@@ -8,5 +9,8 @@
       <option value="">All States</option>
       <option *ngFor="let state of states" [value]="state">{{ state }}</option>
     </select>
+    
   </div>
+  
+
   
