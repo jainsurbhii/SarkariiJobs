@@ -1,74 +1,138 @@
+/* footer.css */
+
 .footer {
-    background-color: #f8f9fa;
-    padding: 20px;
+    background-color: #f0f0f0;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
     text-align: center;
-    border-top: 2px solid #ddd;
 }
 
 .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
+    padding: 0 20px;
 }
 
-.left-column, .right-column {
-    flex: 2;
-    padding: 10px;
+.left-column, .middle-column, .right-column {
+    flex: 1;
+    max-width: 300px;
+    margin: 10px;
 }
 
-h1, h2 {
-    color: #333;
+.subscribe-container p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
 }
 
-.subscribe-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    margin: 15px 0;
-}
-
-.subscribe-container input {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.subscribe-container input[type="email"] {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 5px;
+    width: 60%;
 }
 
 .subscribe-container button {
-    padding: 10px 15px;
+    padding: 8px 15px;
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 1rem;
 }
 
 .subscribe-container button:hover {
     background-color: #0056b3;
 }
 
-.contact-info, .help-section {
-    margin: 20px 0;
-}
-
-.contact-info p, .help-section p {
-    margin: 5px 0;
-    color: #555;
-}
-
-.alert {
+.contact-info {
     margin-top: 20px;
-    padding: 10px;
+    display: inline-block;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.help-section h6, .social-links h6 {
+    margin-bottom: 10px;
     font-weight: bold;
 }
 
-.card-footer {
-    background-color: #e9ecef;
-    padding: 10px;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #777;
+.help-section p, .social-links a {
+    margin: 5px 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+}
+
+.help-section p:hover, .social-links a:hover {
+    text-decoration: underline;
+}
+
+.social-links a {
+    display: block;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-bottom p {
+    margin: 5px 10px;
+}
+
+.social-links-bottom {
+    display: flex;
+    align-items: center;
+    margin: 5px 10px;
+}
+
+.social-links-bottom h6 {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.social-links-bottom a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #333;
+}
+
+.social-links-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .left-column, .middle-column, .right-column {
+        width: 90%;
+        max-width: none;
+        margin: 10px auto;
+    }
+
+    .subscribe-container input[type="email"] {
+        width: 90%;
+        margin: 0 auto 10px;
+        display: block;
+    }
+
+    .subscribe-container button{
+        display: block;
+        margin: 0 auto;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
 }

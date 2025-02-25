@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,15 +10,19 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   menuOpen = false;
   
+  
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
 
-  constructor() { }
+  constructor(private router: Router) {}
 
   ngOnInit() {
     
+  }
+  goToSearch() {
+    this.router.navigate(['/search']);  // ✅ Navigate to SearchComponent
   }
 
 }

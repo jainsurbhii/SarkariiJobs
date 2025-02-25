@@ -8,14 +8,16 @@ import { JobSearchService } from '../job-search.service';
 })
 export class SearchComponent {
   searchTerm: string = '';
+  category: string = '';
+  state: string = '';
 
   constructor(private jobSearchService: JobSearchService) {}
 
   onSearch(): void {
     this.jobSearchService.updateSearchQuery({
       searchTerm: this.searchTerm,
-      category: '',
-      state: ''
+      category: this.category,
+      state: this.state
     });
   }
 }

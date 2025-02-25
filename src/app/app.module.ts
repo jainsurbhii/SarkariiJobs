@@ -11,6 +11,7 @@ import { SearchComponent } from './search/search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { JobSearchComponent } from './job-search/job-search.component';
 import { BasicSearchComponent } from './basic-search/basic-search.component';
+import { AboutModalComponent } from './about-modal/about-modal.component';
 
 @NgModule({
   declarations: [
@@ -20,14 +21,16 @@ import { BasicSearchComponent } from './basic-search/basic-search.component';
     TrendingJobsComponent,
     SearchComponent,
     JobSearchComponent,
-    BasicSearchComponent
+    BasicSearchComponent,
+    AboutModalComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
