@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'sarkariJobs';
+  activeSection: string | null = null;
+
+  toggleSection(section: string) {
+    this.activeSection = this.activeSection === section ? null : section;
+  }
 }

@@ -3,12 +3,14 @@
   <nav>
     <ul>
       <li><a href="#">Home</a></li>
-      <li><a href="#" (click)="aboutModal.openModal()">About</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#" (click)="toggleSection('about')">About</a></li>
+      <li><a href="#" (click)="toggleSection('contact')">Contact</a></li>
+      <li><a href="#" (click)="toggleSection('search')">Search</a></li>
       <li><span class="notification-icon">🔔</span></li>
     </ul>
   </nav>
 </header>
 
-<!-- Include the About Modal Component -->
-<app-about-modal #aboutModal></app-about-modal>
+<app-about-modal [isVisible]="activeSection === 'about'"></app-about-modal>
+<app-contact [isVisible]="activeSection === 'contact'"></app-contact>
+<app-search [isVisible]="activeSection === 'search'"></app-search>

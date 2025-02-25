@@ -1,28 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
-  menuOpen = false;
-  
-  
+export class HeaderComponent {
+  activeSection: string = ''; // Track the currently open section
 
-  toggleMenu() {
-    this.menuOpen = !this.menuOpen;
+  toggleSection(section: string) {
+    this.activeSection = this.activeSection === section ? '' : section;
   }
-
-  constructor(private router: Router) {}
-
-  ngOnInit() {
-    
-  }
-  goToSearch() {
-    this.router.navigate(['/search']);  // ✅ Navigate to SearchComponent
-  }
-
 }

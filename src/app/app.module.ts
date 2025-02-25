@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { JobSearchComponent } from './job-search/job-search.component';
 import { BasicSearchComponent } from './basic-search/basic-search.component';
 import { AboutModalComponent } from './about-modal/about-modal.component';
+import { ContactComponent } from './contact/contact.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { AboutModalComponent } from './about-modal/about-modal.component';
     SearchComponent,
     JobSearchComponent,
     BasicSearchComponent,
-    AboutModalComponent
+    AboutModalComponent,
+    ContactComponent
+    
   ],
   imports: [
     HttpClientModule,
@@ -30,7 +34,7 @@ import { AboutModalComponent } from './about-modal/about-modal.component';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
