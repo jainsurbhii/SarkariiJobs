@@ -1,0 +1,15 @@
+.info-section {
+  background: white;
+  padding: 15px;
+  max-width: 400px;
+  margin: 80px auto 40px; /* Adjust top margin to push below header */
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative; /* Ensure it stays in flow */
+}
+
+/* Adjusting the body padding to prevent content from being hidden */
+body {
+  padding-top: 80px; /* Same height as your fixed header */
+}
