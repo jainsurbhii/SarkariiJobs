@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-about-modal',
@@ -6,13 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-modal.component.css']
 })
 export class AboutModalComponent {
-  isOpen = false;
-
-  openModal() {
-    this.isOpen = true;
-  }
-
-  closeModal() {
-    this.isOpen = false;
-  }
+  @Input() isVisible: boolean = false;
 }

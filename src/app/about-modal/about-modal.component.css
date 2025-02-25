@@ -1,68 +1,21 @@
-/* Modal overlay (background) */
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-  }
-  
-  /* Modal box (small & centered) */
-  .modal-box {
-    background: white;
-    width: 350px; /* Fixed small size */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    color: black;
-  }
-  
-  /* Centered Modal Title */
-  .modal-title {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
-    padding-bottom: 8px;
-  }
-  
-  /* Modal header (removed close button) */
-  .modal-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  /* Modal body */
-  .modal-body {
-    margin-top: 10px;
-    font-size: 15px;
-    color: black;
-    text-align: center; /* Centered text */
-  }
-  
-  /* Modal footer */
-  .modal-footer {
-    margin-top: 15px;
-  }
-  
-  .modal-footer button {
-    background: #007bff;
-    color: white;
-    padding: 8px 14px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .modal-footer button:hover {
-    background: #0056b3;
-  }
-  
+.about-section {
+  background: white;
+  padding: 15px;
+  max-width: 400px;
+  margin: 80px auto 40px; /* Adjust top margin to push below header */
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative; /* Ensure it stays in flow */
+}
+
+/* Hide the section smoothly when toggled off */
+[hidden] {
+    display: none !important;
+}
+
+/* Show the About section when toggled */
+.about-section.ng-star-inserted {
+  opacity: 1;
+  transform: translateY(0);
+}
